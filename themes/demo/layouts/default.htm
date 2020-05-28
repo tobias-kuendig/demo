@@ -1,0 +1,23 @@
+description = "Standard-Layout"
+==
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="EURE NAMEN">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ this.page.title }}</title>
+	{% styles %}
+</head>
+<body>
+    <!-- Header -->
+	<h2>Standardlayout - {{ this.page.title }}</h2>
+
+    <!-- Content -->
+	{% page %}
+
+    <!-- Scripts -->
+	<script src="{{ [ '@jquery', '@framework' ] | theme }}"></script>
+	{% scripts %}
+</body>
+</html>
