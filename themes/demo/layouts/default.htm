@@ -1,4 +1,11 @@
 description = "Standard-Layout"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[staticMenu]
+code = "hauptmenue"
 ==
 <!DOCTYPE html>
 <html lang="de">
@@ -12,7 +19,9 @@ description = "Standard-Layout"
 <body>
     <!-- Header -->
 	<h2>Standardlayout - {{ this.page.title }}</h2>
-
+    
+    {% component 'staticMenu' %}
+    
     <!-- Content -->
 	{% page %}
 
